@@ -1,0 +1,24 @@
+.but{
+    flex: 1;
+   
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.row {
+  margin-bottom: 16px;
+}
+
+.w-100 {
+  width: 100%;
+}
