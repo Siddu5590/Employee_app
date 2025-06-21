@@ -1,27 +1,61 @@
-# Myangular
+# 🧑‍💼 Employee Management System (Angular + Firebase)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+This is a full-featured **Employee Management System** built using **Angular 15+**, **Angular Material**, and **Firebase (Firestore + Hosting)**. It supports adding, editing, deleting, filtering, sorting, and paginating employee records in real-time.
 
-## Development server
+### 🔗 Live App: [https://employee-app-4eec9.web.app](https://employee-app-4eec9.web.app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 📦 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- ✅ Add, edit, and delete employees
+- ✅ Auto-incrementing `employeeId`
+- ✅ Firestore real-time sync
+- ✅ Step-by-step form validation
+- ✅ Filtering and sorting by name, ID, phone, email
+- ✅ Pagination using Angular Material
+- ✅ Responsive UI using Angular Material and Tailwind/Bootstrap
+- ✅ Firebase Hosting
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Technologies Used
 
-## Running unit tests
+- [Angular 15+](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [Firebase Firestore](https://firebase.google.com/docs/firestore)
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- RxJS & Angular Reactive Forms
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 🛠️ Setup Instructions
+npm install
+ng serve
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**To configure your own Firebase backend:**
 
-## Further help
+-Go to Firebase Console
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+-Create a new project
+
+-Enable Cloud Firestore
+
+-Replace the firebaseConfig in src/environments/environment.ts with your own config 
+
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "your-app.firebaseapp.com",
+    projectId: "your-app",
+    storageBucket: "your-app.appspot.com",
+    messagingSenderId: "xxxxxxx",
+    appId: "1:xxxxxxxx:web:xxxxxx"
+  }
+};
+
+Firebase Deployment
+
+ng build --configuration=production
+firebase deploy
