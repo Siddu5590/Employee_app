@@ -1,0 +1,50 @@
+<div mat-dialog-title class="d-flex justify-content-between align-items-center">
+  <span>Employee Form</span>
+  <button mat-icon-button (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content>
+    <div class="row">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Employee First Name</mat-label>
+        <input matInput placeholder="Employee_Name" formControlName="firstName">
+        <mat-error *ngIf="empForm.get('firstName')?.hasError('required')">First name is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" formControlName="lastName">
+        <mat-error *ngIf="empForm.get('lastName')?.hasError('required')">Last name is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Email" formControlName="Email">
+        <mat-error *ngIf="empForm.get('Email')?.hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="empForm.get('Email')?.hasError('email')">Enter a valid email</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Phone No</mat-label>
+        <input matInput type="number" placeholder="Phone_no" formControlName="Phone_no">
+        <mat-error *ngIf="empForm.get('Phone_no')?.hasError('required')">Phone number is required</mat-error>
+        <mat-error *ngIf="empForm.get('Phone_no')?.hasError('pattern')">Enter a valid 10-digit number</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="btn">
+    <button mat-raised-button color="primary" class="but" type="submit" [disabled]="!empForm.valid">
+      {{ isEditMode ? 'Update' : 'Save' }}
+    </button>
+  </div>
+</form>
