@@ -1,3 +1,4 @@
+
 :host {
   display: block;
   min-height: 100vh;
@@ -142,4 +143,30 @@ td.mat-cell {
   .paginator {
     font-size: 12px;
   }
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+  
+.nav-main{
+    background-color: rgb(146, 134, 130);
+    span{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+}
+
+.form-component{
+    padding-top: 20px;
+    max-width: 1248px;
+    margin: 0 auto;
+    
+    mat-form-field{
+        width: 100%;
+        
+    }
+}
+#kali{
+    border-radius: 10px;
+    border: 4px solid blueviolet;
 }

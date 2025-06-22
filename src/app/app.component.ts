@@ -66,6 +66,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+
  getEmployeeList() {
   this._empService.getEmployees().subscribe({
     next: (res) => {
@@ -88,6 +89,9 @@ export class AppComponent implements OnInit {
     error: console.log,
   });
 }
+
+
+  
 
 
   applyFilter(event: Event) {

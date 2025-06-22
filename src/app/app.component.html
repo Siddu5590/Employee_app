@@ -1,7 +1,15 @@
+
 <mat-toolbar class="nav-main">
   <span class="toolbar-title">Employee App</span>
   <span class="example-spacer"></span>
   <button mat-raised-button color="primary" (click)="opendetaildialogform()">
+<mat-toolbar class="nav-main" >
+  
+  <span style="color: white;">Employee App</span>
+  <span class="example-spacer"></span>
+ 
+  <button mat-raised-button (click)="opendetaildialogform()">
+
     Add Employee
   </button>
 </mat-toolbar>
@@ -73,4 +81,80 @@
       aria-label="Select page of users">
     </mat-paginator>
   </div>
+
+
+<div class="form-component">
+  <mat-form-field>
+    <mat-label>Search here...!</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search Emp-name" #input>
+  </mat-form-field>
+  
+  <!-- Responsive Table Wrapper -->
+<div id="kali" class="bg-white rounded-lg shadow-md overflow-auto p-4 sm:p-6">
+
+  <!-- Material Table -->
+  <table mat-table [dataSource]="dataSource" matSort class="min-w-[700px] w-full text-sm mat-elevation-z8">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-4 py-2 text-left font-medium text-gray-700">ID</th>
+      <td mat-cell *matCellDef="let row" class="px-4 py-2 text-gray-800">{{ row.employeeId }}</td>
+    </ng-container>
+
+    <!-- First Name Column -->
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-4 py-2 text-left font-medium text-gray-700">First Name</th>
+      <td mat-cell *matCellDef="let row" class="px-4 py-2 text-gray-800">{{ row.firstName }}</td>
+    </ng-container>
+
+    <!-- Last Name Column -->
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-4 py-2 text-left font-medium text-gray-700">Last Name</th>
+      <td mat-cell *matCellDef="let row" class="px-4 py-2 text-gray-800">{{ row.lastName }}</td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-4 py-2 text-left font-medium text-gray-700">Email</th>
+      <td mat-cell *matCellDef="let row" class="px-4 py-2 text-gray-800">{{ row.Email }}</td>
+    </ng-container>
+
+    <!-- Phone Column -->
+    <ng-container matColumnDef="Phone_no">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-4 py-2 text-left font-medium text-gray-700">Phone No</th>
+      <td mat-cell *matCellDef="let row" class="px-4 py-2 text-gray-800">{{ row.Phone_no }}</td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="px-4 py-2 text-left font-medium text-gray-700">Action</th>
+      <td mat-cell *matCellDef="let row" class="px-4 py-2 flex items-center gap-2">
+        <button mat-icon-button color="primary" (click)="openEditForm(row)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteEmployee(row.docId)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Header & Row Definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- No Data Row -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell text-center py-4 text-gray-500" colspan="5">
+        No data matching the filter "{{ input.value }}"
+      </td>
+    </tr>
+  </table>
+
+  <!-- Paginator -->
+  <mat-paginator class="mt-4"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 aria-label="Select page of users">
+  </mat-paginator>
+</div>
+
 </div>
