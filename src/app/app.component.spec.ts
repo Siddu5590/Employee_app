@@ -22,10 +22,9 @@ describe('AppComponent', () => {
 
   it(`should have as title 'myangular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.componentInstance as any;
     expect(app.title).toEqual('myangular');
   });
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
