@@ -1,64 +1,47 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {StoreModule} from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material.module';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import {AuthService} from './auth/auth.service'
+import { TrainingService } from './training/training.service';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-// Angular Material modules
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-// Firebase
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from '../environments/environment';
 
-// Components
-import { EmpDetailDialogComponent } from './emp-detail-dialog/emp-detail-dialog.component';
+import { environment } from '../environments/environment';
+import { UIService } from './shared/ui.service';
+import { AuthModule } from './auth/auth.module';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { reducers } from './app.reducer';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-        // ✅ HomeComponent used for employee table
-    EmpDetailDialogComponent // ✅ Dialog component
+    WelcomeComponent,
+    HeaderComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-
-    // Firebase
+    AppRoutingModule,
+    MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-
-    // Angular Material
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatSnackBarModule
+    FlexLayoutModule,
+    AuthModule,
+    StoreModule.forRoot(reducers)
   ],
-  providers: [],
+  providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

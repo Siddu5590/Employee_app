@@ -1,11 +1,12 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyAVzF0s0gEOkQoILYkNafQlnc8L5QfbtSc",
-  authDomain: "employee-app-4eec9.firebaseapp.com",
-  projectId: "employee-app-4eec9",
-  storageBucket: "employee-app-4eec9.firebasestorage.app",
-  messagingSenderId: "450331135605",
-  appId: "1:450331135605:web:374e2ccb0492f90034723c"
+    apiKey: "AIzaSyCnUPmBjzi02ihCLAZmpcwCv4GglRFAXVo",
+  authDomain: "fitness-tracker-66f92.firebaseapp.com",
+  projectId: "fitness-tracker-66f92",
+  storageBucket: "fitness-tracker-66f92.firebasestorage.app",
+  messagingSenderId: "265649636342",
+  appId: "1:265649636342:web:3c891e0076491394167dd7",
+  measurementId: "G-19FXDBF64J"
   }
 };

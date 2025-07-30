@@ -1,0 +1,93 @@
+[debug] [2025-07-16T10:12:32.252Z] ----------------------------------------------------------------------
+[debug] [2025-07-16T10:12:32.255Z] Command:       C:\nvm4w\nodejs\node.exe C:\Users\siddu swamy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2025-07-16T10:12:32.255Z] CLI Version:   14.8.0
+[debug] [2025-07-16T10:12:32.255Z] Platform:      win32
+[debug] [2025-07-16T10:12:32.256Z] Node Version:  v20.19.3
+[debug] [2025-07-16T10:12:32.256Z] Time:          Wed Jul 16 2025 15:42:32 GMT+0530 (India Standard Time)
+[debug] [2025-07-16T10:12:32.256Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-16T10:12:32.475Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-16T10:12:32.477Z] > authorizing via signed-in user (sidduswamy925@gmail.com)
+[debug] [2025-07-16T10:12:32.478Z] [iam] checking project employee-app-4eec9 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-07-16T10:12:32.480Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:32.481Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:32.483Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-app-4eec9:testIamPermissions [none]
+[debug] [2025-07-16T10:12:32.484Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-app-4eec9:testIamPermissions x-goog-quota-user=projects/employee-app-4eec9
+[debug] [2025-07-16T10:12:32.485Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-app-4eec9:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-16T10:12:32.959Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-app-4eec9:testIamPermissions 200
+[debug] [2025-07-16T10:12:32.960Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-app-4eec9:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-16T10:12:32.961Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:32.961Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:32.962Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/employee-app-4eec9 [none]
+[debug] [2025-07-16T10:12:33.486Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/employee-app-4eec9 200
+[debug] [2025-07-16T10:12:33.487Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/employee-app-4eec9 {"projectId":"employee-app-4eec9","projectNumber":"450331135605","displayName":"employee-app","name":"projects/employee-app-4eec9","resources":{"hostingSite":"employee-app-4eec9"},"state":"ACTIVE","etag":"1_94da84fb-4bd6-4a6f-b98e-b9956eabf4d7"}
+[info] 
+[info] === Deploying to 'employee-app-4eec9'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-07-16T10:12:33.505Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:33.506Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:33.509Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions [none]
+[debug] [2025-07-16T10:12:33.509Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-07-16T10:12:34.848Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions 200
+[debug] [2025-07-16T10:12:34.849Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions {"name":"projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[employee-app-4eec9]: beginning deploy... 
+[info] i  hosting[employee-app-4eec9]: found 8 files in dist/fitness-tracker/browser 
+[debug] [2025-07-16T10:12:34.905Z] [hosting] uploading with 200 concurrency
+[debug] [2025-07-16T10:12:34.992Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:34.993Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:34.995Z] [hosting] hash cache [ZGlzdFxmaXRuZXNzLXRyYWNrZXJcYnJvd3Nlcg] stored for 8 files
+[debug] [2025-07-16T10:12:34.996Z] [hosting][hash queue][FINAL] {"max":74,"min":10,"avg":21.75,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":82}
+[debug] [2025-07-16T10:12:34.996Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338:populateFiles [none]
+[debug] [2025-07-16T10:12:34.997Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338:populateFiles {"files":{"/chunk-JUEXVGJE.js":"b6be6f6ac2c1151b6585de45485e4bb7721b6d31094850df9faa61cf5f79568e","/chunk-IDFRXQP6.js":"77d60a6a2dcf4d593fab16df2c36bea1cb30982d7d75bac3da0066d0d346f0c8","/index.html":"e231748ac0b975b5e209807017fae4915bd4779bf6774fc57d8837b690b8d114","/polyfills-FFHMD2TL.js":"736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35","/main-AACBCENK.js":"e8c86b0b3e242286c1a575c913c5177299cc8110661a826fb4640917c93ddd66","/styles-JVVAYVNO.css":"3f29b1876deb7bc79fc924264b811249ac3c224be4d3d72b6b1253929f5ce712","/chunk-L7TVQH4Q.js":"76b7d6ada8e0fe1631cce8534d89f8d63cd168c086e38493caa3c4f28e9cf997","/chunk-RXV3JTKM.js":"7dfa880cb2c2f309738559bff4d0a92378261e7163da4dcc16d4203f76f1a07f"}}
+[debug] [2025-07-16T10:12:35.416Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338:populateFiles 200
+[debug] [2025-07-16T10:12:35.416Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/employee-app-4eec9/versions/f13d9c6c2ce17338/files"}
+[debug] [2025-07-16T10:12:35.418Z] [hosting][populate queue][FINAL] {"max":425,"min":425,"avg":425,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":426}
+[debug] [2025-07-16T10:12:35.419Z] [hosting] uploads queued: 0
+[debug] [2025-07-16T10:12:35.420Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1752660755420}
+[info] i  hosting: upload complete 
+[info] +  hosting[employee-app-4eec9]: file upload complete 
+[debug] [2025-07-16T10:12:35.424Z] [hosting] deploy completed after 566ms
+[debug] [2025-07-16T10:12:35.425Z] [
+  {
+    "config": {
+      "public": "dist/fitness-tracker/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "employee-app-4eec9"
+    },
+    "version": "projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338"
+  }
+]
+[info] i  hosting[employee-app-4eec9]: finalizing version... 
+[debug] [2025-07-16T10:12:35.440Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:35.441Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:35.444Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions/f13d9c6c2ce17338 updateMask=status%2Cconfig
+[debug] [2025-07-16T10:12:35.445Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions/f13d9c6c2ce17338 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-07-16T10:12:35.936Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions/f13d9c6c2ce17338 200
+[debug] [2025-07-16T10:12:35.937Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/versions/f13d9c6c2ce17338 {"name":"projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-07-16T10:12:33.984953Z","createUser":{"email":"sidduswamy925@gmail.com"},"finalizeTime":"2025-07-16T10:12:35.476961Z","finalizeUser":{"email":"sidduswamy925@gmail.com"}}
+[debug] [2025-07-16T10:12:35.938Z] [hosting] finalized version for employee-app-4eec9:[object Object]
+[info] +  hosting[employee-app-4eec9]: version finalized 
+[info] i  hosting[employee-app-4eec9]: releasing new version... 
+[debug] [2025-07-16T10:12:35.941Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:35.942Z] Checked if tokens are valid: true, expires at: 1752663452206
+[debug] [2025-07-16T10:12:35.943Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/channels/live/releases versionName=projects%2F450331135605%2Fsites%2Femployee-app-4eec9%2Fversions%2Ff13d9c6c2ce17338
+[debug] [2025-07-16T10:12:35.944Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/channels/live/releases {}
+[debug] [2025-07-16T10:12:36.469Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/channels/live/releases 200
+[debug] [2025-07-16T10:12:36.470Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-app-4eec9/channels/live/releases {"name":"projects/450331135605/sites/employee-app-4eec9/channels/live/releases/1752660755374000","version":{"name":"projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-07-16T10:12:33.984953Z","createUser":{"email":"sidduswamy925@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJE2EoIdtvUVjhbJzMn6h21LTxgRdvGavkBeS9ytH8gQ3I_LR9L"},"finalizeTime":"2025-07-16T10:12:35.476961Z","finalizeUser":{"email":"sidduswamy925@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJE2EoIdtvUVjhbJzMn6h21LTxgRdvGavkBeS9ytH8gQ3I_LR9L"}},"type":"DEPLOY","releaseTime":"2025-07-16T10:12:35.374Z","releaseUser":{"email":"sidduswamy925@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJE2EoIdtvUVjhbJzMn6h21LTxgRdvGavkBeS9ytH8gQ3I_LR9L"}}
+[debug] [2025-07-16T10:12:36.471Z] [hosting] release: {"name":"projects/450331135605/sites/employee-app-4eec9/channels/live/releases/1752660755374000","version":{"name":"projects/450331135605/sites/employee-app-4eec9/versions/f13d9c6c2ce17338","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-07-16T10:12:33.984953Z","createUser":{"email":"sidduswamy925@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJE2EoIdtvUVjhbJzMn6h21LTxgRdvGavkBeS9ytH8gQ3I_LR9L"},"finalizeTime":"2025-07-16T10:12:35.476961Z","finalizeUser":{"email":"sidduswamy925@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJE2EoIdtvUVjhbJzMn6h21LTxgRdvGavkBeS9ytH8gQ3I_LR9L"}},"type":"DEPLOY","releaseTime":"2025-07-16T10:12:35.374Z","releaseUser":{"email":"sidduswamy925@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJE2EoIdtvUVjhbJzMn6h21LTxgRdvGavkBeS9ytH8gQ3I_LR9L"}}
+[info] +  hosting[employee-app-4eec9]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/employee-app-4eec9/overview
+[info] Hosting URL: https://employee-app-4eec9.web.app

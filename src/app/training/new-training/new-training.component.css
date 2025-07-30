@@ -1,0 +1,54 @@
+.new-training {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Card styling */
+.card-container {
+  padding: 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideFadeIn 0.7s ease-out;
+}
+
+/* Hover interaction */
+.card-container:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+mat-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Form field full width */
+.full-width {
+  width: 100%;
+}
+
+/* Button spacing */
+mat-card-actions {
+  margin-top: 20px;
+}
+
+/* Smooth fade-in & slide animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,94 @@
+.login-form {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg') no-repeat center center/cover;
+
+}
+
+/* Optional overlay for contrast */
+.login-form::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  /* darken slightly for readability */
+  z-index: 0;
+}
+
+/* Form container — fully transparent */
+.form-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 28px;
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: none;
+  animation: fadeSlideIn 0.8s ease-in-out;
+}
+
+/* Smooth entry animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Title styling */
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Material input fields */
+.form-field {
+  width: 100%;
+  color: white;
+}
+
+.mat-form-field-wrapper,
+.mat-form-field-infix {
+  color: white !important;
+}
+
+.mat-form-field-label,
+.mat-hint,
+.mat-error {
+  color: #fff !important;
+}
+
+input.mat-input-element {
+  color: white !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+/* Button styles */
+button[mat-flat-button] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 6px;
+}
+
+button[mat-flat-button]:hover {
+  background-color: #125ea6;
+  transform: translateY(-2px);
+}

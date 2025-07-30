@@ -1,0 +1,58 @@
+<section class="signup-form">
+  <h1 class="form-title">Sign Up</h1>
+
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center"
+    fxLayoutGap="20px" class="form-container">
+    <!-- Email Field -->
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Enter your Email</mat-label>
+      <input type="email" matInput formControlName="email" placeholder="Enter Email" />
+      <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="signupForm.get('email')?.hasError('email')">
+        Enter a valid email
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Password Field -->
+    <mat-form-field appearance="fill" class="form-field" hintLabel="Password must be at least 6 characters">
+      <mat-label>Enter your Password</mat-label>
+      <input type="password" matInput formControlName="password" placeholder="Enter Password" />
+      <mat-hint align="end">
+        {{ signupForm.get('password')?.value?.length || 0 }}/6
+      </mat-hint>
+      <mat-error *ngIf="signupForm.get('password')?.hasError('required')">
+        Password is required
+      </mat-error>
+      <mat-error *ngIf="signupForm.get('password')?.hasError('minlength')">
+        Password must be at least 6 characters
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Birthdate Field -->
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Enter your Birthdate</mat-label>
+      <input matInput [matDatepicker]="picker" [max]="maxDate" formControlName="birthdate"
+        placeholder="Choose a date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="signupForm.get('birthdate')?.hasError('required')">
+        Birthdate is required
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Terms Checkbox -->
+    <div fxLayoutAlign="start center" class="form-field">
+      <mat-checkbox formControlName="agree" color="primary">
+        Agree to terms and conditions.
+      </mat-checkbox>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" *ngIf="!(isLoading$ | async)" mat-flat-button color="primary" [disabled]="signupForm.invalid">
+      Submit
+    </button>
+    <mat-spinner *ngIf="isLoading$ | async" diameter="40"></mat-spinner>
+  </form>
+</section>

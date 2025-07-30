@@ -1,0 +1,59 @@
+/* Top toolbar */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #3f51b5;
+  color: white;
+}
+
+/* Menu toggle button */
+.toggle {
+  color: white;
+}
+
+/* App brand */
+mat-toolbar a {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+/* Top nav items */
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-items li a:hover {
+  color: #c5cae9;
+}
+
+/* Main content padding */
+main {
+  padding: 24px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+
+  mat-toolbar {
+    justify-content: space-between;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/myangular/browser",
+    "public": "dist/fitness-tracker/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

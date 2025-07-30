@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/myangular",
+            "outputPath": "dist/fitness-tracker",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -40,12 +40,7 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -117,6 +112,10 @@
     }
   },
   "cli": {
-    "analytics": "c81a3100-67c8-4c2b-bcba-dbf836034486"
+    "analytics": "c81a3100-67c8-4c2b-bcba-dbf836034486",
+    "cache": {
+    "path": "./.ngcache"
   }
-}
+
+  }
+} 

@@ -1,0 +1,50 @@
+.welcome-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-20px);
+  
+}
+
+.info-card h1 {
+  font-size: 1.5rem;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 30px 10px;
+  }
+
+  .info-card {
+    width: 90%;
+    max-width: 100%;
+  }
+  
+}
